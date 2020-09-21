@@ -21,6 +21,9 @@ def findEncoding(images):
 encodeListknown = findEncoding(images)
 
 cap = cv2.VideoCapture(0)
+cap.set(3,640) #width 
+cap.set(4,480) #height
+cap.set(10,100)
 while True:
     success,img = cap.read()
     imgS = cv2.resize(img,(0,0),None,0.25,0.25)
